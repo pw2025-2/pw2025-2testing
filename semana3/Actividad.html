@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Los Elefantes</title>
+  <style>
+    body {
+      background-color: black;
+      color: limegreen;
+      font-family: 'Zen Dots', sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .verso {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+    .rojo {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Los elefantes</h1>
+  <div id="cancion"></div>
+
+  <script>
+    var opcion = parseInt(prompt("¿Cuántos elefantes deben haber? (1 al 5)"));
+    // Números en letras
+    const numeros = ["Un", "Dos", "Tres", "Cuatro", "Cinco"];
+
+    // Contenedor donde pondremos la canción
+    const contenedor = document.getElementById("cancion");
+
+    // Validar que esté en el rango
+    if (opcion >= 1 && opcion <= 5) {
+      for (let i = 1; i <= opcion; i++) {
+        let numero = numeros[i-1]; 
+
+        // Primer verso
+        let verso1 = `<p class="verso"><span class="rojo">${numero}</span> ${i === 1 ? "elefante se balanceaba" : "elefantes se balanceaban"} sobre la tela de una araña</p>`;
+        // Segundo verso
+        let verso2 = `<p class="verso">Como ${i === 1 ? "veía" : "veían"} que resistía ${i === 1 ? "fue" : "fueron"} a llamar a otro elefante más ...</p>`;
+
+        contenedor.innerHTML += verso1 + verso2;
+      }
+    } else {
+      contenedor.innerHTML = "<p class='verso'>Número no válido, ingresa del 1 al 5.</p>";
+    }
+  </script>
+</body>
+</html>
