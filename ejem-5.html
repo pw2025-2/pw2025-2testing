@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>...::Aprendo JavaScript ::...</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mi primer lab del curso" />
+    <meta name="keywords" content="programacion, web, html, ulima" />
+    <link rel="icon" href="logo1.ico" type="image/vnd.microsoft.icon" size="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/lab03.css" type="text/css" />
+    
+</head>
+
+<body>
+     <h1> Manejo de Arrays </h1>
+    <script>
+       
+
+        // declarar un array
+        var a0 = new Array(); // Arreglo vacio
+        var a1 = new Array(5); // Arreglo com 5 
+
+        //Inicializar 
+        for ( let i=0; i < a1.length; i++){
+            a1[i] = i;
+        }
+        document.writeln("<p> El arreglo A1: " + a1 + "</p>");
+
+        //Todo junto
+        var a3 = [2,4,6,8,10];
+
+        //Un tipo especial de for
+
+        for (let elemento in a1){
+            document.writeln ("<p> ELEMENTO= " + elemento + " " + a3[elemento]+ "<p>");
+        }
+
+        // Juntar elementos
+        document.wrtieln("<p> Juntar Elementos : " + a3.join("---") + "</p>");
+
+        //Posicion de un elemento
+        document.writeln("<p> Posicion de un elemento : " + a3.indexOf(6) + "</p>");
+
+        //Ordenar arreglos
+        a4 = [2,4,6,8,1,3,5,7] 
+        document.wrtieln("<p> Arreglo antes : " + a4 + "</p>");
+        document.wrtieln("<p> Arreglo despues : " + a4.sort() + "</p>");
+
+        a5 = ["pera","manzana","albaricoque","fresa"];
+        document.writeln("<p>Arreglo antes : " + a5 + "</p>");
+        document.wrtieln("<p> Arreglo despues : " + a5.sort() + "</p>");
+
+
+
+    </script>
+    
+
+</body>
+
+</html>
