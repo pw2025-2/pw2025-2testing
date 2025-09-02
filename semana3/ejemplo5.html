@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>...::Aprendo JavaScript ::...</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mi primer lab del curso" />
+    <meta name="keywords" content="programacion, web, html, ulima" />
+    <link rel="icon" href="logo1.ico" type="image/vnd.microsoft.icon" size="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/lab03.css" type="text/css" />
+
+</head>
+
+<body>
+    <h1> Manejo de Arrays </h1>
+    <script>
+        //Declarando
+        var a0 = new Array(); // Array vacío
+        var a1 = new Array(5); // Array con 5 elementos
+        //Inicializar
+        for (let i = 0; i < a1.length; i++) {
+            a1[i]=i;
+        }
+        document.writeln("<p> a1: " + a1 + "</p>");
+
+        //Todo Junto
+        var a3 = [2,4,6,8,10];
+
+        //Un tipo especial de for
+        for (let elemento in a3){
+            document.writeln("<p> Elemento = " + elemento + ";" + " Valor: " + a3[elemento] + "</p>");
+        }
+
+        //Juntar elementos
+        document.writeln("<p> a3.join(): " + a3.join("- - - -") + "</p>");
+
+        //Saber la posición de un elemento
+        var pos = a3.indexOf(6);
+        document.writeln("<p> La posición de 6 en a3 es: " + pos + "</p>");
+
+        // Ordenar Arreglos Num
+        a4v = [2,4,6,8,1,3,5,7]
+        document.writeln("<p> \"Arreglo Antes:\"" + a4v + "</p>");
+        a4v.sort();
+        document.writeln("<p> \"Arreglo Después:\"" + a4v + "</p>");
+
+        // Ordenar Arreglos String
+        a5 = ["Pera", "Manzana", "Albaricoque", "Fresa"];
+        document.writeln("<p> \"Arreglo Antes:\"" + a5 + "</p>");
+        document.writeln("<p> \"Arreglo Después:\"" + a5.sort() + "</p>");
+
+        //Reverse
+        document.writeln("<p> \"Arreglo Reverso:\"" + a5v.reverse() + "</p>");
+
+        //Otra Forma: Programación Funcional.
+        document.writeln("<p> \"Orden Ascendente:\"" + a4v.sort(function(a,b){return a-b}) + "</p>");
+        document.writeln("<p> \"Orden Descendente:\"" + a4v.sort(function(a,b){return b-a}) + "</p>");
+
+    </script>
+
+    </body>
+    </html>
