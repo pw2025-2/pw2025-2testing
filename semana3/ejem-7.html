@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>...::Aprendo JavaScript ::...</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mi primer lab del curso" />
+    <meta name="keywords" content="programacion, web, html, ulima" />
+    <link rel="icon" href="logo1.ico" type="image/vnd.microsoft.icon" size="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/lab03.css" type="text/css" />
+
+</head>
+<body>
+    <h1> Los elefantes </h1>
+
+    <script>
+    var a = "elefante se balanceaba sobre la tela de una araña.<br>Como veía que resistía, fue a llamar a otro elefante más ....";
+    var b = "elefantes se balanceaban sobre la tela de una araña.<br>Como veía que resistía, fueron a llamar a otro elefante más ....";
+
+    var nombres = ["Un", "Dos", "Tres", "Cuatro", "Cinco"];
+    var opcion = prompt("Ingrese un valor del 1 al 5");
+
+    if (opcion === "1" || opcion === "2" || opcion === "3" || opcion === "4" || opcion === "5") {
+        var cantidad = Number(opcion); 
+        
+        for (var i = 1; i <= cantidad; i++) {
+            if (i === 1) {
+                document.writeln("<p><strong>" + nombres[i - 1] + "</strong> " + a + "</p>");
+            } else {
+                document.writeln("<p><strong>" + nombres[i - 1] + "</strong> " + b + "</p>");
+            }
+        }
+    } else {
+        document.writeln("<p>Por favor, ingrese un número válido entre 1 y 5.</p>");
+    }
+    </script>
+</body>
+
+</html>
