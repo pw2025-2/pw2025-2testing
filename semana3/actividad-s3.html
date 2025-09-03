@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>...::Aprendo JavaScript ::...</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mi actividad" />
+    <meta name="keywords" content="elefante" />
+    <link rel="icon" href="logo1.ico" type="image/vnd.microsoft.icon" size="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/lab03.css" type="text/css" />
+
+</head>
+
+<body>
+    <h1> Los elefantes </h1>
+    <script>
+        var cantidad = prompt("Ingresa un valor del 1 al 5");
+        if (cantidad >= 1 && cantidad <= 5) {
+            for (let opcion = 1; opcion <= cantidad; opcion++) {
+                let numeroTexto = "";
+                switch (opcion) {
+                    case 1: numeroTexto = "Un"; break;
+                    case 2: numeroTexto = "Dos"; break;
+                    case 3: numeroTexto = "Tres"; break;
+                    case 4: numeroTexto = "Cuatro"; break;
+                    case 5: numeroTexto = "Cinco"; break;
+                }
+                if (opcion == 1) {
+                    document.write("<p> <span class='numero'>" + numeroTexto + "</span>&nbspelefante se balanceaba sobre la tela de una araña <br> Como veian que resistia fueron a llamar a otro elefante más </p>");
+                } else {
+                    document.write("<p> <span class='numero'>" + numeroTexto + "</span>&nbspelefantes se balanceaban sobre la tela de una araña <br> Como veian que resistian fueron a llamar a otro elefante más </p>");
+                }
+            }
+        } else {
+            document.writeln("<p>Debe ingresar un número entre 1 y 5 </p>");
+        }
+    </script>
+</body>
+
+</html>
