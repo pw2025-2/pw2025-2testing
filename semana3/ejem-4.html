@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>...::Aprendo JavaScript ::...</title>
     <meta charset="UTF-8" />
@@ -11,13 +12,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/lab03.css" type="text/css" />
 
 </head>
 
 <body>
-    
+    <script>
+        var aleato = Math.random();
+        document.writeln("<p>Valor de Aleato " + aleato + "</p>");
+        var randito = Math.floor(1 + Math.random() * 6);
+        document.writeln("<p>Valor de DADO " + randito + "</p>");
+        document.writeln("<img src='./img/" + randito + ".jpg' />");
+
+    </script>
 </body>
 
 </html>
